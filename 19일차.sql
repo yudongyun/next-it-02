@@ -99,7 +99,7 @@ FROM dual;
 
 SELECT mem_id
     , mem_add1
-    , REGEXP_REPLACE(mem_add1, '^[(대전)가-힣]{1,}+','대전') as text2
+    , REGEXP_REPLACE(mem_add1, '^[(대전)가-힣]{1,}+','대전') as 대전
 FROM member
 WHERE mem_add1 LIKE '%대전%'
 AND mem_id != 'p001';
